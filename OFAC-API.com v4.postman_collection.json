@@ -1,0 +1,39 @@
+{
+	"info": {
+		"_postman_id": "fb0ec80b-5728-4f6f-a3ec-4ad538a4f4c0",
+		"name": "OFAC-API.com v4",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/screen",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"apiKey\":\"your-api-key\",\n    \"minScore\": 95,\n    \"sources\":[\"sdn\", \"nonsdn\", \"un\", \"ofsi\", \"eu\", \"dpl\", \"sema\", \"bfs\", \"mxsat\", \"lfiu\"],\n    \"cases\": [\n        {\n            \"name\": \"Ubaidullah Akhund Sher Mohammed\",\n            \"externalId\": \"001\"\n        },\n        {\n            \"name\": \"Abu Abbas\",\n            \"externalId\": \"002\",\n            \"dob\": \"1948-12-10\"\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.ofac-api.com/v4/screen",
+					"protocol": "https",
+					"host": [
+						"api",
+						"ofac-api",
+						"com"
+					],
+					"path": [
+						"v4",
+						"screen"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
