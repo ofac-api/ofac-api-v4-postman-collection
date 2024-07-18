@@ -34,6 +34,69 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "/entities",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "apiKey",
+						"value": "{{apiKey}}",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "https://api.ofac-api.com/v4/entities?sources=SDN,EU&types=person,organization,vessel,aircraft&categories=sanction,debarrment",
+					"protocol": "https",
+					"host": [
+						"api",
+						"ofac-api",
+						"com"
+					],
+					"path": [
+						"v4",
+						"entities"
+					],
+					"query": [
+						{
+							"key": "sources",
+							"value": "SDN,EU"
+						},
+						{
+							"key": "types",
+							"value": "person,organization,vessel,aircraft"
+						},
+						{
+							"key": "categories",
+							"value": "sanction,debarrment"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/entities/{id}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.ofac-api.com/v4/entities/sdn-abu-abbas",
+					"protocol": "https",
+					"host": [
+						"api",
+						"ofac-api",
+						"com"
+					],
+					"path": [
+						"v4",
+						"entities",
+						"sdn-abu-abbas"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }
